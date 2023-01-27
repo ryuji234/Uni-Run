@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     private const string GAME_OVER_UI_OBJS = "GameOverUI";
 
     public bool isGameOver = false;
+    
     private GameObject scoreTxtObj = default;
     private GameObject gameOverUI = default;
 
