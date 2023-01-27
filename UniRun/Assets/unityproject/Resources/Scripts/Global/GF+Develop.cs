@@ -11,9 +11,18 @@ public static partial class GF
     {
 #if DEBUG_MODE
         Debug.Log(message);
-#endif
+#endif      //DEBUG_MODE
 
-    }
+    }       //Log()
+
+    [System.Diagnostics.Conditional("DEBUG_MODE")]
+    public static void LogWarning(object message)
+    {
+#if DEBUG_MODE
+        Debug.LogWarning(message);
+#endif      //DEBUG_MODE
+
+    }       //LogWarning()
 
     [System.Diagnostics.Conditional("DEBUG_MODE")]
     public static void Log(object message, UnityEngine.Object context)

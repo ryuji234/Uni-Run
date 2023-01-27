@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public static partial class GF
 {
     //! 텍스트메쉬프로 형태의 컴포넌트의 
-    public static void SetTextMeshPro(GameObject obj_, string text_)
+    public static void SetTextMeshPro(this GameObject obj_, string text_)
     {
         Text tmptext = obj_.GetComponent<Text>();
         if(tmptext == null || tmptext == default(Text))

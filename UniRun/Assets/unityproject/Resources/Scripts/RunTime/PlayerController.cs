@@ -61,6 +61,9 @@ public class PlayerController : MonoBehaviour
         playerAudio.Play();
         playerRigid.velocity = Vector2.zero;
         isDead = true;
+
+        // 게임 오브젝트 매니저로 플레이어가 죽었을 때의 UI 처리를 한다.
+        GameManager.instance.OnPlayerDead();
     }
     // 트리거 출돌 감지 처리를 위한 함수
     private void OnTriggerEnter2D(Collider2D other)
